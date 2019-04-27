@@ -227,6 +227,6 @@ pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/venv,python,jetbrains+all
 
-.doit.db
+.doit.db*
 data.py
 gui.py
