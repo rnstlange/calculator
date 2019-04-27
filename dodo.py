@@ -27,9 +27,19 @@ def task_gui():
     }
 
 
+def task_build_exe():
+    """Build executable file"""
+
+    return {
+        'actions': ['pyinstaller -Fwy --clean main.py'],
+    }
+
+
+'''
 def task_test():
     """Run main.py"""
 
     return {
         'actions': ['python main.py']
     }
+'''
