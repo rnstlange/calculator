@@ -10,6 +10,9 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
+        self.init()
+
+    def init(self):
         self.init_vizitka()
 
     def init_vizitka(self):
@@ -18,7 +21,7 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
         self.vizitka_col.setValidator(QtGui.QIntValidator())
 
     def calc_vizitka_price(self):
-        col = int(self.vizitka_col.text())
+        col = int(self.vizitka_col.text() or '0')
         max_col = 50
         for i in [50, 100, 200, 300, 400, 500, 1000, 2000]:
             if col / i >= 1:
@@ -36,11 +39,12 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
         rent_coef = data['types']['vizitka'][colorful][max_col]
         laminate_cost = data['extra']['laminate'][max_col]
         round_cost = data['extra']['rounding'][max_col]
-
-        price = ((paper_price + print_cost) / 24) * col * rent_coef + laminate_cost * lam_b + round_cost * round_b
-
-        self.vizitka_price.setText(str(int(price * 100) / 100))
-        self.vizitka_pricep1.setText(str(int(price * 100 / col) / 100))
+        dop = laminate_cost * lam_b + round_cost * round_b
+        summ = ((paper_price + print_cost) / 24) * rent_coef
+        price = str(int(col > 49 and (summ * col + dop) * 100) / 100)
+        pricep1 = str(int((summ + dop / (col or 1)) * 100) / 100)
+        self.vizitka_price.setText(price)
+        self.vizitka_pricep1.setText(pricep1)
 
 
 def main():
