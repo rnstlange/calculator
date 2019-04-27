@@ -1,19 +1,8 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, uic
-import yaml
 
 import gui
-
-with open("./data.yaml", "r", encoding="utf-8") as stream:
-    data = yaml.safe_load(stream)
-
-# print(data['paper']['Офсетная 80 гр.'])
-
-
-# menu = {
-#    '': 0,
-#    'Визитки': 1
-# }
+from data import data
 
 
 class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
