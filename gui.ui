@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Группа изделий:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="group">
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Визитки</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="SWPEmpty">
+       <layout class="QFormLayout" name="formLayout"/>
+      </widget>
+      <widget class="QWidget" name="SWPVizitki">
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="vizitka_papre_label">
+          <property name="text">
+           <string>Бумага:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="vizitka_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="vizitka_colorful_label">
+          <property name="text">
+           <string>Цветность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="vizitka_colorful">
+          <item>
+           <property name="text">
+            <string>4+0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4+4</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="vizitka_col_label">
+          <property name="text">
+           <string>Тираж:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="vizitka_col"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="vizitka_lamination_label">
+          <property name="text">
+           <string>Ламинация:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="vizitka_lamination">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="vizitka_rounding_label">
+          <property name="text">
+           <string>Скругление углов:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QCheckBox" name="vizitka_rounding">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="vizitka_price_label">
+          <property name="text">
+           <string>Итоговая цена:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QLabel" name="vizitka_price">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <spacer name="vizitka_verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="12" column="0">
+         <widget class="QPushButton" name="vizitka_pushButton">
+          <property name="text">
+           <string>Рассчитать</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="vizitka_pricep1_label">
+          <property name="text">
+           <string>Цена 1 листа бумаги:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QLabel" name="vizitka_pricep1">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>group</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
