@@ -41,7 +41,7 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
         round_cost = data['extra']['rounding'][max_col]
         dop = laminate_cost * lam_b + round_cost * round_b
         summ = ((paper_price + print_cost) / 24) * rent_coef
-        price = str(int(col > 49 and (summ * col + dop) * 100) / 100)
+        price = str(int(col and (summ * col + dop) * 100) / 100)
         pricep1 = str(int((summ + dop / (col or 1)) * 100) / 100)
         self.vizitka_price.setText(price)
         self.vizitka_pricep1.setText(pricep1)
