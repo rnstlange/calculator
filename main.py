@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import QtWidgets, QtGui, uic
+from PyQt5 import QtWidgets, QtGui
 
 import gui
 from data import data
