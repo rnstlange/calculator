@@ -13,11 +13,8 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
         self.init()
 
     def init(self):
-        self.init_vizitka()
 
-    def init_vizitka(self):
         self.vizitka_pushButton.clicked.connect(self.calc_vizitka_price)
-
         self.vizitka_col.setValidator(QtGui.QIntValidator())
 
     def calc_vizitka_price(self):

@@ -26,12 +26,42 @@
      <widget class="QComboBox" name="group">
       <item>
        <property name="text">
-        <string/>
+        <string>Визитки</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Визитки</string>
+        <string>Листовки</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Бланки</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Буклеты и каталоги</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Евробуклеты</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Календари</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Блокноты</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Конверты</string>
        </property>
       </item>
      </widget>
@@ -48,11 +78,8 @@
        <number>0</number>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="SWPEmpty">
-       <layout class="QFormLayout" name="formLayout"/>
-      </widget>
       <widget class="QWidget" name="SWPVizitki">
        <layout class="QFormLayout" name="formLayout_2">
         <item row="0" column="0">
@@ -246,6 +273,711 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="SWPListovki">
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="listovka_paper_label">
+          <property name="text">
+           <string>Бумага:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="listovka_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="listovka_colorful_label">
+          <property name="text">
+           <string>Цветность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="listovka_colorful">
+          <item>
+           <property name="text">
+            <string>4+0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4+4</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="listovka_fill_label">
+          <property name="text">
+           <string>Заливка:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="listovka_fill">
+          <item>
+           <property name="text">
+            <string>20%</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>100%</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="listovka_format_label">
+          <property name="text">
+           <string>Формат листовок:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="listovka_format">
+          <item>
+           <property name="text">
+            <string>A3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>A4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>A5</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>A6</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>210*98</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>150*70</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>100*70</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="listovka_col_label">
+          <property name="text">
+           <string>Тираж:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="listovka_col"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="listovka_lamination_label">
+          <property name="text">
+           <string>Ламинация:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QCheckBox" name="listovka_lamination">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QCheckBox" name="listovka_rounding">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="listovka_rounding_label">
+          <property name="text">
+           <string>Скругление углов:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="listovka_bigovka_label">
+          <property name="text">
+           <string>Биговка:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="listovka_bigovka"/>
+        </item>
+        <item row="8" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="listovka_pricep1_label">
+          <property name="text">
+           <string>Цена 1 листа бумаги:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QLabel" name="listovka_pricep1">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="listovka_price_label">
+          <property name="text">
+           <string>Итоговая цена:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QLabel" name="listovka_price">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QPushButton" name="listovka_pushButton">
+          <property name="text">
+           <string>Рассчитать</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SWPBlanki">
+       <layout class="QFormLayout" name="formLayout_4">
+        <item row="0" column="1">
+         <widget class="QComboBox" name="blank_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SWPBukleti">
+       <layout class="QFormLayout" name="formLayout_5">
+        <item row="0" column="1">
+         <widget class="QComboBox" name="buklet_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="buklet_block_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SWPEurobukleti">
+       <layout class="QFormLayout" name="formLayout_6">
+        <item row="0" column="1">
+         <widget class="QComboBox" name="eurobuklet_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SWPKalendari"/>
+      <widget class="QWidget" name="SWPBloknoti">
+       <layout class="QFormLayout" name="formLayout_7">
+        <item row="0" column="1">
+         <widget class="QComboBox" name="bloknot_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="blocknot_block_paper">
+          <item>
+           <property name="text">
+            <string>Офсетная 80 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 130гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Maxigloss 170гр./м.кв</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delight gloss в упак C2S Art</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Arconvert</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Тач кавер 300</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ICELASER Лен</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Comet брилиант 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acquerello 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nettuno 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sirio pearl 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Splendorgel 300 гр.</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TintoRetto 300 гр.</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SWPKonverti"/>
      </widget>
     </item>
    </layout>
