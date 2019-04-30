@@ -187,7 +187,11 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="vizitka_col"/>
+         <widget class="QLineEdit" name="vizitka_col">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
         <item row="3" column="0">
          <widget class="QLabel" name="vizitka_lamination_label">
@@ -447,7 +451,11 @@
          </widget>
         </item>
         <item row="4" column="1">
-         <widget class="QLineEdit" name="listovka_col"/>
+         <widget class="QLineEdit" name="listovka_col">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="listovka_lamination_label">
@@ -478,14 +486,18 @@
          </widget>
         </item>
         <item row="7" column="0">
-         <widget class="QLabel" name="listovka_bigovka_label">
+         <widget class="QLabel" name="listovka_big_label">
           <property name="text">
            <string>Биговка:</string>
           </property>
          </widget>
         </item>
         <item row="7" column="1">
-         <widget class="QLineEdit" name="listovka_bigovka"/>
+         <widget class="QLineEdit" name="listovka_big">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
         <item row="8" column="1">
          <spacer name="verticalSpacer">
