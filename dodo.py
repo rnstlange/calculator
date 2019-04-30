@@ -1,5 +1,7 @@
 import yaml
 
+DOIT_CONFIG = {'default_tasks': ['exec']}
+
 
 def task_data():
     """Convert data.yaml to data.py"""
@@ -27,19 +29,20 @@ def task_gui():
     }
 
 
-def task_build_exe():
+def task_build():
     """Build executable file"""
 
     return {
         'actions': ['pyinstaller -Fwy --clean main.py'],
+        'task_dep': ['data', 'gui'],
+        'file_dep': ['main.py']
     }
 
 
-'''
-def task_test():
+def task_exec():
     """Run main.py"""
 
     return {
-        'actions': ['python main.py']
+        'actions': ['python main.py'],
+        'task_dep': ['data', 'gui']
     }
-'''

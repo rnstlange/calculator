@@ -1,4 +1,4 @@
 PyQt5
 pyyaml
 doit
-pyinstaller
+https://github.com/pyinstaller/pyinstaller/tarball/develop
