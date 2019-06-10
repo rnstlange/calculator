@@ -15,7 +15,8 @@ class Widget:
     def get_col(self):
         return int(getattr(self.window, self.name + '_col').text() or '0')
 
-    def get_obj_max_col(self, obj, col):
+    @staticmethod
+    def get_obj_max_col(obj, col):
         result = list(obj.keys())[0]
         for i in obj:
             if i <= col:
@@ -67,7 +68,10 @@ class Widget:
         return data['extra']['rounding'][max_col] * self.get_rounding()
 
     def get_format(self):
-        return getattr(self.window, self.name + '_format').currentText()
+        if not self.format:
+            return getattr(self.window, self.name + '_format').currentText()
+        else:
+            return self.format
 
     def get_big(self):
         return int(getattr(self.window, self.name + '_big').text() or '0')
@@ -100,6 +104,10 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
         self.listovka_pushButton.clicked.connect(self.calc_listovka_price)
         self.listovka_col.setValidator(QtGui.QIntValidator())
         self.listovka_big.setValidator(QtGui.QIntValidator())
+
+        self.blank_pushButton.clicked.connect(self.calc_blank_price)
+        self.blank_col.setValidator(QtGui.QIntValidator())
+        self.blank_big.setValidator(QtGui.QIntValidator())
 
     def calc_vizitka_price(self):
         widget = Widget(self, 'vizitka', fill='100%')
@@ -134,7 +142,27 @@ class Calculator(QtWidgets.QMainWindow, gui.Ui_MainWindow):
 
         summ = ((paper_price + print_cost) / red_value) * rent_coef
         dop = lamination_cost + rounding_cost + big_cost
-        print(big_cost, dop)
+
+        price = col and (summ * col + dop)
+        pricep1 = summ + dop / (col or 1)
+
+        widget.set_price(price)
+        widget.set_pricep1(pricep1)
+
+    def calc_blank_price(self):
+        widget = Widget(self, 'blank')
+
+        paper_price = widget.get_paper_price()
+        col = widget.get_col()
+        print_cost = widget.get_print_cost()
+        colorful = widget.get_colorful()
+        lamination_cost = widget.get_lamination_cost()
+        rounding_cost = widget.get_rounding_cost()
+        big_cost = widget.get_big_cost()
+        rent_coef = widget.get_obj_max(data['types']['blanki'][colorful], col)
+
+        summ = ((paper_price + print_cost) / 2) * rent_coef
+        dop = lamination_cost + rounding_cost + big_cost
 
         price = col and (summ * col + dop)
         pricep1 = summ + dop / (col or 1)
